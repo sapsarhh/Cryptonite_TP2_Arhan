@@ -92,6 +92,11 @@ A)learnt how to use the gdb compiler and about how to disassemble the code.
 Incorrect Methods:
 1) tried to use gdb debugger0_a without the wget command and that didnt work out.
 
+References:
+https://www.linkedin.com/pulse/disassembly-fungame-gdb-brian-warner/
+
+used the above link to learn how to disassemble main.
+
 
 
 
