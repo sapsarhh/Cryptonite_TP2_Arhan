@@ -44,8 +44,41 @@ Learnings:
 
 References:
 https://abdurrehmanrehan.medium.com/immersive-labs-cyber-million-packet-analysis-wireshark-wireshark-stream-object-extraction-f4f76d4c28cc#:~:text=Extracting%20objects,object%20type%20from%20the%20list.
+
+
 https://www.youtube.com/watch?v=Fn__yRYW6Wo&ab_channel=ChrisGreer
 
+
+## tunnel vision
+## flag
+picoCTF{qu1t3_a_v13w_2020}
+
+Step 1: Just like the last challenge got to learn alot from this one.
+Step 2:
+In this challenge I was given a file which wasnt opening and the only hint was, that it isnt displaying.
+Step 3:
+Confused, used the HxD editor which is a HxD editor to see what type of file it is.
+First thing I see in the decoding is that the initials BM are written signifying that it is a bitmap file ie a bmp extension.
+Step 4:
+Put a .bmp extension in the file and tried to open it.
+It became an bmp file but didnt open due to being corrupted.
+Step 5:
+Now some changes were supposed to be made in the HxD editor so what I did was I opened the bmp file format on wikipedia to try and make changes but didnt really help me out.
+Step 6:
+Then what I did was I opened an bmp file which was created in the last challenge to look at its source in the HxD editor and maybe use that as a reference and try and fix the file.
+What I noticed was(i dont entirely understand this part) but in the 0A and 0E part there was BA D written which was supposed to be 36 and 28.
+Made those changes and noticed that now the file opened but played a prank on me and told me not a flag.
+Funnily enough I noticed that this maybe wasnt the whole image and it was cropped.
+Step 7:
+That was exactly it and extending the image height gave me the full image and also the flag.
+
+![image](https://github.com/user-attachments/assets/8f785793-5d7b-42b8-b80a-a67ffa3dcc72)
+
+Learnings:
+A) already knew how to use HxD editor but still learnt more like how to change image height and all.
+
+References:
+No references per say.
 
 
 
