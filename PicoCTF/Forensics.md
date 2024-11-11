@@ -72,7 +72,8 @@ Funnily enough I noticed that this maybe wasnt the whole image and it was croppe
 Step 7:
 That was exactly it and extending the image height gave me the full image and also the flag.
 
-![image](https://github.com/user-attachments/assets/8f785793-5d7b-42b8-b80a-a67ffa3dcc72)
+![image](https://github.com/user-attachments/assets/5e860002-42cb-4c18-abaa-e01d968b555d)
+
 
 Learnings:
 A) already knew how to use HxD editor but still learnt more like how to change image height and all.
