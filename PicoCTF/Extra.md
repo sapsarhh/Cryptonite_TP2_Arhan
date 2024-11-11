@@ -98,7 +98,7 @@ A) nothing new learnt as such just a key takeaway to not straight dive into the 
 
 
 
-# Power Cookie
+# Power Cookie(Web Exploitation)
 ## flag
 picoCTF{gr4d3_A_c00k13_0d351e23}
 
@@ -107,4 +107,20 @@ Step 1: This one as well was very basic, just inspected the website found a js c
 
 
 ![image](https://github.com/user-attachments/assets/2a6eb9b4-9419-44d7-a953-20ef8b0998c3)
+
+# CVE-XXXX-XXXX
+## flag
+picoCTF{CVE-2021-34527}
+
+Step 1:
+Just researched the given info which was given in the question and literally recieved all the data on it on this website(in the references).
+![image](https://github.com/user-attachments/assets/217c3cf6-e6fd-41ba-9478-eaf395b0cd0a)
+
+Learnings:
+A) learnt about the vulnerability in the windows print spooler service(in 2021) in which a hacker had full rights to the system.
+
+References:
+https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=windows+print+spooler
+
+
 
