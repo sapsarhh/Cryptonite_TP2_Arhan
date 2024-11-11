@@ -95,3 +95,16 @@ picoCTF{starting_to_get_the_hang_c588b8a1}
 
 Learnings:
 A) nothing new learnt as such just a key takeaway to not straight dive into the question, instead taking a little time to read the source code and understand what the question actually requires.
+
+
+
+# Power Cookie
+## flag
+picoCTF{gr4d3_A_c00k13_0d351e23}
+
+Step 1: This one as well was very basic, just inspected the website found a js code which had isAdmin=0 which meant that I was a guest hence I made isAdmin=1 which gave me admin access hence I logged in and got the flag.
+![image](https://github.com/user-attachments/assets/23d6dfc0-b24b-4fc8-89a8-de14ca321aa5)
+
+
+![image](https://github.com/user-attachments/assets/2a6eb9b4-9419-44d7-a953-20ef8b0998c3)
+
