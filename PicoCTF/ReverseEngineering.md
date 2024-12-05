@@ -87,7 +87,7 @@ End of assembler dump.
 ![image](https://github.com/user-attachments/assets/b82270e9-afec-484d-8f3b-cbf61b1b329a)
 
 Learnings:
-A)learnt how to use the gdb compiler and about how to disassemble the code.
+A) learnt how to use the gdb compiler and about how to disassemble the code.
 
 Incorrect Methods:
 1) tried to use gdb debugger0_a without the wget command and that didnt work out.
@@ -97,6 +97,32 @@ https://www.linkedin.com/pulse/disassembly-fungame-gdb-brian-warner/
 
 used the above link to learn how to disassemble main.
 
+
+## ARMassembly1
+## Flag
+picoCTF{00000d2a}
+
+Step 1:
+In the following question I was given a file named chall.s which was an assembly language code and I opened it.
+in the question I was instructed that for some argument win would be printed for the numbers 79,7 and 3.
+Step 2:
+In the code I saw that there is a function which can either print you win or you lose depending on the arguments.
+Step 3:
+Then after some research and watching some resources I got to know what the symbols in assembly language mean, I got to know that w0  is 79<<7 which was stored in sp,28 then that result was divided by 3 and then finally that was subtracted with the input which the user has to input to get the required result.
+Step 4:
+Using the above operations an equation could be formed, which is (79*7)/3-x=0 and if solved the answer comes out to be 3370 which is the answer.
+Step 5:
+When this is converted to the form which is specified in the question, the flag comes out to be 00000d2a.
+
+Learnings:
+Learnt a little about what the symbols in assembly language mean.
+
+
+Incorrect Methods:
+Tried to execute the code which didnt work.
+
+References:
+https://www.youtube.com/playlist?list=PLMB3ddm5Yvh3gf_iev78YP5EPzkA3nPdL
 
 
 
