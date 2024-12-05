@@ -125,4 +125,63 @@ References:
 https://www.youtube.com/playlist?list=PLMB3ddm5Yvh3gf_iev78YP5EPzkA3nPdL
 
 
+## Vault Door 3
+## Flag
+jU5t_a_s1mpl3_an4gr4m_4_u_1fb380
+
+Step 1:
+Opened the java file which was given in the queestion.
+Step 2:
+Opened the file and there was a code written in which there was a string given which was jU5t_a_sna_3lpm18gb41_u_4_mfr340, and some transformations were made on the string inputted by the user if the string was 32 characters long.
+Step 3:
+Now I tried running the code through an online compiler in java itself but it kept giving me an error of access denied even when there were 32 characters.
+Step 4:
+Now in the code I understood that if the format was picoCTF{} some string inside the curly braces then the code should run but it wasnt.
+Step 5:
+Now in the code the aforesaid string had to be transformed to something which was done in the for loops and the transformed code was the flag itself.
+Step 5:
+So I copied the transformations happening in the code(the for loops primarily), put that inside a C file and copied the string as well and run the code.
+That gave me the flag.
+
+Code(which I wrote on C):
+~~~
+#include <stdio.h>
+void main(){
+
+
+
+char *password="jU5t_a_sna_3lpm18gb41_u_4_mfr340";
+char buffer[32];
+        int i=0;
+        for (i=0; i<8; i++) {
+            buffer[i] = password[i];
+        }
+        for (; i<16; i++) {
+            buffer[i] = password[23-i];
+        }
+        for (; i<32; i+=2) {
+            buffer[i] = password[46-i];
+        }
+        for (i=31; i>=17; i-=2) {
+            buffer[i] = password[i];
+        }
+        printf("%s", buffer);
+        
+
+}
+~~~
+
+![image](https://github.com/user-attachments/assets/5bf47074-394f-427b-9ce4-4a8da4f0358a)
+
+Learnings:
+No new learnings as such just learnt a little java as I have not done it earlier.
+
+Incorrect Methods:
+Tried running the code in an online java compiler which didnt work.
+
+No references.
+
+
+
+
 
