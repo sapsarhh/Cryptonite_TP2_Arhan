@@ -124,5 +124,16 @@ https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=windows+print+spooler
 
 # Ascii Numbers(General Skills)
 ## flag
+picoCTF{45c11_n0_qu35710n5_1ll_t311_y3_n0_l135_445d4180}
+
+Step 1:
+Nothing as such to do in this challenge, just to convert string of hexadecimal characters to ascii readable text.
+
+No learnings.
+
+References:
+cyber chef
+
+# dont you love banners(general skills)
 
 
