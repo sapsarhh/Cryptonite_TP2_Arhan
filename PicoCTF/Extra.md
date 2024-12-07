@@ -122,5 +122,7 @@ A) learnt about the vulnerability in the windows print spooler service(in 2021) 
 References:
 https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=windows+print+spooler
 
+# Ascii Numbers(General Skills)
+## flag
 
 
