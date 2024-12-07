@@ -127,7 +127,7 @@ https://www.youtube.com/playlist?list=PLMB3ddm5Yvh3gf_iev78YP5EPzkA3nPdL
 
 ## Vault Door 3
 ## Flag
-jU5t_a_s1mpl3_an4gr4m_4_u_1fb380
+picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_1fb380}
 
 Step 1:
 Opened the java file which was given in the queestion.
