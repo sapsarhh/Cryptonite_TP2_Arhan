@@ -299,6 +299,22 @@ References:
 2) https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 
 
+# Rotation(crypt)
+## Flag
+	picoCTF{r0tat1on_d3crypt3d_4c71f5b0}
+
+Step 1:
+The name of the challenge is rotation which corresponds to ROT decipher which had to be done here.
+When I saw the decrypted text, the first letter was x and I knew the first letter of the flag should be p hence a shift of 8 letters was required.
+I confirmed this by looking at the next letter which was q and i also have a difference of 8 letters.
+Hence I opened up a website and shifted 8 letters and got the flag.
+
+
+![image](https://github.com/user-attachments/assets/0bc5da85-276e-4fc9-8b38-4733a8d41d01)
+
+References:
+1) https://www.dcode.fr/rot-cipher
+
 
 
 
