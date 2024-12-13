@@ -407,3 +407,23 @@ References:
 
 Incorrect Methods:
 When I cat'ed the csr file I began to look through the data for hidden text and tried to decode it into other formats.
+
+
+# Flags(crypt)
+# Flag:
+picoCTF{F1AG5AND5TUFF}
+
+Step 1:
+opened the image and got to know that the flags corresponded to some letter or number and also knew that the first letters were picoCTF hence that was that.
+After that I google what these flags meant and got to know that these were International Maritime Signal Flags.
+Opened up the wiki page and mapped each flag to their letter/number and got the flag.
+
+![image](https://github.com/user-attachments/assets/fa42f905-d44f-4b9c-b988-e3744a6ea74b)
+
+Learnings:
+Learnt about International Maritime Signal Flags and what some of these corresponded to.
+
+References:
+https://en.wikipedia.org/wiki/International_maritime_signal_flags
+
+
