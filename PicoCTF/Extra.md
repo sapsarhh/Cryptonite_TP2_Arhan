@@ -282,6 +282,23 @@ References:
 2) https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')&input=NzA2OTYzNmY0MzU0NDY3YjU1Mzk1ODVmNTU2ZTUwMzQ2MzZiMzE0ZTM2NWY0MjMxNmUzNDUyNjkzMzUzNWYzMTYxMzU2MTMzNjYzMzM5N2Q
 
 
+# Vignere(Cryptography)
+## Flag
+picoCTF{D0NT_US3_V1G3N3R3_C1PH3R_2951a89h}
+
+Step 1:
+Didnt really have to do much in this challenge, due to prior knowledge I know that vignere cipher requires a key to decode some text, so using the key I just opened up a website to decode the ciphertext and got the flag.
+
+![image](https://github.com/user-attachments/assets/e58a2ced-cc6e-4ac2-b912-920ce6dcbece)
+
+Learnings:
+1) No learnings per say
+
+References:
+1) https://cryptii.com/pipes/vigenere-cipher
+2) https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
+
+
 
 
 
