@@ -14,7 +14,7 @@ Category : AI
 # Flag:
 nite{C@TCHME!FY0UCAN}
 
-Solution:
+# Solution:
 In the question, there was python code provided and a server to connect to.
 On connecting to the server through the WSL, it gave me a challenge and asked its solution(this challenge was random), now to get the solution to the specific challenge, the following command had to be used:
 ~~~
