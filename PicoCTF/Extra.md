@@ -539,3 +539,17 @@ picoCTF{M4K3_5UR3_70_CH3CK_Y0UR_1NPU75_68466E2F}
 
 But after going through the source code, I saw that there was an else condition that would print the flag, if the input provided isnt a number.
 
+## Mind your Ps and Qs(crypt)
+## Flag:
+picoCTF{sma11_N_n0_g0od_00264570}
+
+Step 1:
+This was one of the easiest problems in pico, as the values of e(exponent-small value), n(number) and c(ciphertext) were all given and with the help of an rsa cipher this could be decoded(i knew this due to miniRSA)
+
+![image](https://github.com/user-attachments/assets/44ce2802-8cf6-4378-9252-383f5fcc4495)
+
+References:
+https://www.dcode.fr/rsa-cipher
+
+
+
