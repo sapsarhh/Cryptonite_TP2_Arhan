@@ -426,4 +426,116 @@ Learnt about International Maritime Signal Flags and what some of these correspo
 References:
 https://en.wikipedia.org/wiki/International_maritime_signal_flags
 
+# basic file exploit(binary exp)
+## flag:
+picoCTF{M4K3_5UR3_70_CH3CK_Y0UR_1NPU75_68466E2F}
+
+Step 1:
+Honestly I didnt even open the source code, which was wrong on my part.
+there was a hint given that if a string is entered instead of a number when a number is supposed to be input, that would lead to unexpected behaviour.
+I just did that and got the flag.
+
+~~~
+bash
+nc saturn.picoctf.net 53049
+Hi, welcome to my echo chamber!
+Type '1' to enter a phrase into our database
+Type '2' to echo a phrase in our database
+Type '3' to exit the program
+1
+1
+Please enter your data:
+weojewjew
+weojewjew
+Please enter the length of your data:
+e0e
+e0e
+Please put in a valid length
+Please enter the length of your data:
+No data given.
+Please put in a valid length
+Please enter the length of your data:
+4
+4
+Your entry number is: 1
+Write successful, would you like to do anything else?
+keoeewk
+keoeewk
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+4
+4
+Please type either 1, 2 or 3
+Maybe breaking boundaries elsewhere will be helpful
+6
+6
+Please type either 1, 2 or 3
+Maybe breaking boundaries elsewhere will be helpful
+3
+3
+e
+saps@LAPTOP-KKUS7K8J:~$ nc saturn.picoctf.net 53049
+Hi, welcome to my echo chamber!
+Type '1' to enter a phrase into our database
+Type '2' to echo a phrase in our database
+Type '3' to exit the program
+iwjejoewe
+iwjejoewe
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+2
+2
+No data yet
+ewkewpwe
+ewkewpwe
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+No data given.
+Please put in a valid number
+1
+1
+Please enter your data:
+woewekwe
+woewekwe
+Please enter the length of your data:
+ewwe-
+ewwe-
+Please put in a valid length
+Please enter the length of your data:
+Please put in a valid length
+Please enter the length of your data:
+5
+5
+Your entry number is: 1
+Write successful, would you like to do anything else?
+oewjewkew
+oewjewkew
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+lwelwe
+lwelwe
+Please put in a valid number
+Please put in a valid number
+Please put in a valid number
+No data given.
+Please put in a valid number
+2
+2
+Please enter the entry number of your data:
+jeowe
+jeowe
+picoCTF{M4K3_5UR3_70_CH3CK_Y0UR_1NPU75_68466E2F}
+~~~
+
+But after going through the source code, I saw that there was an else condition that would print the flag, if the input provided isnt a number.
 
