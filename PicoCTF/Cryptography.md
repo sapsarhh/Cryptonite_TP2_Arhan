@@ -139,3 +139,185 @@ Learnings:
 Incorrect Methods:
 1) Tried wrapping the ciphertext into the initial code without making the changes.
 2) Used the wrong command when I recieved the output of the code which didnt work.
+
+
+
+
+# Custom Encryption
+## Flag:
+picoCTF{custom_d2cr0pt6d_dc499538}
+I felt this was a reverse engineering question rather than a cryptography question.
+Step 1: Now this particular challenge was really tough and I even had to refer to a video to solve it as I just could not solve it after alot of tries, so to get started 2 files were provided one containing 2 values(a and b) and a ciphertext which was an array of values.
+The second file was of course a python script which had alot of functions for decrypting some cipher text.
+
+Step 2:
+Now I realized that an decryption algorithm had to be made because all that this script was doing was encrypting some cipher text and not decrypting it and that was the change that had to be made.
+Now I had the basic idea on what to do.
+Firstly I copied the encrypt function and made another one which was the decrypt function which took the values as parameters which were returned by the encrypt function.
+
+Basically the changes/calculations that were happening in the encrypt function had to be reversed in the decrypt function.
+~~~
+def encrypt(plaintext, key):
+    cipher = []
+    for char in plaintext:
+        cipher.append(ord(char) * key * 311)
+    return cipher
+
+
+def decrypt(ciphertext, key):
+    plain = ""
+    for num in ciphertext:
+        decrypted_num = int(num / key / 311)
+        plain += chr(decrypted_num)
+    return plain
+~~~
+
+Like here the decrypt function took the cipher text returned by the encrypt function and returned a plain text which undid the changes(multiplying the number by the key and that by 311) and added those characters in the plain text.
+
+Step 3:
+
+Then there was a xor function of course an encrypted one, so a decrypted one had to be made as well.
+~~~
+def dynamic_xor_encrypt(plaintext, text_key):
+    cipher_text = ""
+    key_length = len(text_key)
+    for i, char in enumerate(plaintext[::-1]):
+        key_char = text_key[i % key_length]
+        encrypted_char = chr(ord(char) ^ ord(key_char))
+        cipher_text += encrypted_char
+    return cipher_text
+
+
+def dynamic_xor_decrypt(ciphertext, text_key):
+    plain_text = ""
+    key_length = len(text_key)
+    for i, char in enumerate(ciphertext):
+        key_char = text_key[i % key_length]
+        decrypted_char = chr(ord(char) ^ ord(key_char))
+        plain_text += decrypted_char
+    return plain_text
+~~~
+
+In the decrypt function it again took the ciphertext as parameter which was returned by the above decrypt function and iterating through the characters of the ciphertext and then xor'ing the ascii values of char and keychar and storing them in plaintext and returning that.
+Then the values of a and b had to be substituted as well as substituting the array in the message variable to make the code run.
+
+~~~
+message = [33588, 276168, 261240, 302292, 343344, 328416, 242580, 85836, 82104, 156744, 0, 
+               309756, 78372, 18660, 253776, 0, 82104, 320952, 3732, 231384, 89568, 100764, 
+               22392, 22392, 63444, 22392, 97032, 190332, 119424, 182868, 97032, 26124, 44784, 63444]
+
+~~~
+
+![image](https://github.com/user-attachments/assets/c9f8d470-3c62-4d5c-ad2c-3264e5a9f391)
+
+This was the output recieved when the code was debugged as it had alot of errors initially.
+
+Learnings:
+1) Now as stated above this was rather a question of rev eng as a whole new algorithm of decryption had to be created.
+2) Learnt how to make a new decryption algorithm for complex questions.
+3) I had the basic idea on what to do but for fine tuning I had to refer to a video for making the code work as it had errors.
+
+The following is the whole modified script:
+
+~~~
+from random import randint
+import sys
+
+
+def generator(g, x, p):
+    return pow(g, x) % p
+
+
+def encrypt(plaintext, key):
+    cipher = []
+    for char in plaintext:
+        cipher.append(ord(char) * key * 311)
+    return cipher
+
+
+def decrypt(ciphertext, key):
+    plain = ""
+    for num in ciphertext:
+        decrypted_num = int(num / key / 311)
+        plain += chr(decrypted_num)
+    return plain
+
+
+def is_prime(p):
+    v = 0
+    for i in range(2, p + 1):
+        if p % i == 0:
+            v = v + 1
+    return v <= 1
+
+
+def dynamic_xor_encrypt(plaintext, text_key):
+    cipher_text = ""
+    key_length = len(text_key)
+    for i, char in enumerate(plaintext[::-1]):
+        key_char = text_key[i % key_length]
+        encrypted_char = chr(ord(char) ^ ord(key_char))
+        cipher_text += encrypted_char
+    return cipher_text
+
+
+def dynamic_xor_decrypt(ciphertext, text_key):
+    plain_text = ""
+    key_length = len(text_key)
+    for i, char in enumerate(ciphertext):
+        key_char = text_key[i % key_length]
+        decrypted_char = chr(ord(char) ^ ord(key_char))
+        plain_text += decrypted_char
+    return plain_text
+
+
+def test(cipher_text, text_key):
+    p = 97
+    g = 31
+    if not is_prime(p) or not is_prime(g):
+        print("Enter prime numbers")
+        return
+    a = 89  
+    b = 27  
+    print(f"a = {a}")
+    print(f"b = {b}")
+    u = generator(g, a, p)  
+    v = generator(g, b, p)  
+    key = generator(v, a, p)  
+    b_key = generator(u, b, p)  
+
+    if key == b_key:
+        print("Shared key established successfully!")
+        shared_key = key
+    else:
+        print("Invalid key")
+        return
+
+    
+    semi_cipher = decrypt(cipher_text, shared_key)
+    plain = dynamic_xor_decrypt(semi_cipher, text_key)
+    print(f'Plaintext is: {plain[::-1]}')
+
+
+if __name__ == "__main__":
+    message = [33588, 276168, 261240, 302292, 343344, 328416, 242580, 85836, 82104, 156744, 0, 
+               309756, 78372, 18660, 253776, 0, 82104, 320952, 3732, 231384, 89568, 100764, 
+               22392, 22392, 63444, 22392, 97032, 190332, 119424, 182868, 97032, 26124, 44784, 63444]
+    test(message, "trudeau")
+~~~
+
+
+
+
+Incorrect Methods:
+1) Couldnt really come up with the whole decryption algorithm(for the xor function)
+2) Tried to run the code with the existing functions with no decryption algo(i dont now why)
+
+
+References:
+1) https://www.youtube.com/watch?v=3cPnX_9bLPs&t=231s&ab_channel=MartinCarlisle
+
+
+
+               
+
