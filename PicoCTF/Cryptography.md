@@ -146,6 +146,8 @@ Incorrect Methods:
 # Custom Encryption
 ## Flag:
 picoCTF{custom_d2cr0pt6d_dc499538}
+
+
 I felt this was a reverse engineering question rather than a cryptography question.
 Step 1: Now this particular challenge was really tough and I even had to refer to a video to solve it as I just could not solve it after alot of tries, so to get started 2 files were provided one containing 2 values(a and b) and a ciphertext which was an array of values.
 The second file was of course a python script which had alot of functions for decrypting some cipher text.
