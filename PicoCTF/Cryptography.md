@@ -313,7 +313,7 @@ if __name__ == "__main__":
 
 Incorrect Methods:
 1) Couldnt really come up with the whole decryption algorithm(for the xor function)
-2) Tried to run the code with the existing functions with no decryption algo(i dont now why)
+2) Tried to run the code with the existing functions with no decryption algo(i dont know why)
 
 
 References:
