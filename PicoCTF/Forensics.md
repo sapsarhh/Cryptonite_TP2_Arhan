@@ -82,4 +82,32 @@ References:
 No references per say.
 
 
+## Moonwalk
+## flag:
+picoCTF{beep_boop_im_in_space}
+
+Step 1:
+Was given an audio message in this question, a .wav extension file.
+Firstly I was confused on what to do with the file as it only contained a stuttering noise and nothing else.
+Researched about the hint that was provided, "How did pictures from the moon landing get sent back to Earth?", when I searched this on google alot of things came up but there was one which said sstv("To broadcast the SSTV transmission on standard television, NASA ground receiving stations performed real-time scan conversion to the NTSC television format. The moonwalk's converted video signal was broadcast live around the world on July 21, 1969 (2:56 UTC).")
+
+Step 2:
+So then I researched on how to decode .wav files with the help of sstv and got the link of an app which is used to decode audio files and convert them into images using sstv.
+Downloaded the app and when I put the audio in the app, got this image:
+
+![image](https://github.com/user-attachments/assets/d66f24b5-c361-4b2b-8490-af0988705772)
+
+Rotated that and got the flag.
+
+Learnings:
+1) Learnt about the sstv decoder which is used to convert audio files into images.
+
+References:
+1) https://en.wikipedia.org/wiki/Apollo_TV_camera#:~:text=NASA%20selected%20a%20scan%20converter,split%20it%20into%20two%20branches.
+2) https://www.qsl.net/on6mu/rxsstv.htm
+
+Incorrect Methods:
+1) tried to listen to the audio file for some secret message without reading the 1st hint.
+2) tried to make out something from the 2nd hint which seemed useless to me and still does.
+
 
