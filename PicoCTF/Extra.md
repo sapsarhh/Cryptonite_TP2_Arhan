@@ -551,5 +551,27 @@ This was one of the easiest problems in pico, as the values of e(exponent-small 
 References:
 https://www.dcode.fr/rsa-cipher
 
+## Picker 1
+## Flag:
+picoCTF{4_d14m0nd_1n_7h3_r0ugh_ce4b5d5b}
+
+Step 1:
+Not much to do in this question, just opened up the server and it told me to use some kind of command getrandomnumber which was always giving me the value 4.
+When I opened the python script, there was a function named getrandomnumber() which was being called and was printing the value 4.
+When I scrolled, I saw a win() function which was taking the flag and converting it to hexadecimal value.
+So that is what I did called the win() function and got the flag.
+
+~~~
+bash
+Try entering "getRandomNumber" without the double quotes...
+==> win
+0x70 0x69 0x63 0x6f 0x43 0x54 0x46 0x7b 0x34 0x5f 0x64 0x31 0x34 0x6d 0x30 0x6e 0x64 0x5f 0x31 0x6e 0x5f 0x37 0x68 0x33 0x5f 0x72 0x30 0x75 0x67 0x68 0x5f 0x63 0x65 0x34 0x62 0x35 0x64 0x35 0x62 0x7d
+Try entering "getRandomNumber" without the double quotes...
+~~~
+
+![image](https://github.com/user-attachments/assets/8fc3c7bd-f33e-47eb-843a-ab4541962511)
+
+
+
 
 
