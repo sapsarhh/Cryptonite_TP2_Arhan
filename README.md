@@ -5,4 +5,4 @@ Repo for the second task phase of Cryptonite.
 username:
 arhansaps
 
-![image](https://github.com/user-attachments/assets/b11e2de8-9533-45a1-a8f4-85a584726490)
+![image](https://github.com/user-attachments/assets/87cb11a1-9542-454c-bb04-12b5429e4816)
