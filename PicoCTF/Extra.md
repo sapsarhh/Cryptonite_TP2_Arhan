@@ -636,3 +636,24 @@ None
 
 ![image](https://github.com/user-attachments/assets/2d46401c-627d-4270-8fe7-da1f38cfb949)
 
+
+
+## PcapPoisoning (Forensics)
+
+## Flag:
+picoCTF{P64P_4N4L7S1S_SU55355FUL_fc4e803f}
+
+Step 1:
+Opened up wireshark and looked through the files data objects and found the flag.
+Alternative Method:
+Using strings command also yields the flag.
+![image](https://github.com/user-attachments/assets/0f0b339d-d17e-40d5-b09f-461432ebc41c)
+
+
+![image](https://github.com/user-attachments/assets/c765bd7a-68d6-451a-9147-436e68cc4668)
+
+
+Incorrect Methods Tried:
+1) Tried to export different objects from the file as that was done in a forensics challenge.
+
+
