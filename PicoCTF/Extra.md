@@ -598,3 +598,23 @@ Learnings:
 
 References:
 https://www.geeksforgeeks.org/maximum-value-of-int-in-c/
+
+
+
+
+## Reverse(rev eng)
+
+## Flag:
+picoCTF{3lf_r3v3r5ing_succe55ful_d7b14d43}
+
+Step 1:
+So luckily for me, whenever I get a file in any challenge I wget that file, download it in the terminal and check out its properties.
+So firstly I used the file command got to know that this was an ELF file, so then I used strings command and that gave me the flag.
+
+
+![image](https://github.com/user-attachments/assets/c3085f57-1242-4211-9bc5-d138358e1c66)
+
+Learnings:
+No learnings
+
+
