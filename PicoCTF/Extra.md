@@ -618,3 +618,21 @@ Learnings:
 No learnings
 
 
+## Ready Gladiator 0 (Rev Eng)
+
+## flag:
+picoCTF{h3r0_t0_z3r0_4m1r1gh7_7c030e56}
+
+Step 1:
+Honestly, I just got lucky in this challenge, because what happened is I didnt download the source code at first and instead of directing the servers input to the file as given in the question, I just connected to the server and entered a random name and got the flag.
+
+Then after opening the file and telling chatgpt to stimulate the red code into gcc I got to know what was happening as if I redirect the input of the server to the file then it doesnt give me the flag because I always tie and not lose.
+
+Learnings:
+1) Got to know that a programming language named red exists
+
+References:
+None
+
+![image](https://github.com/user-attachments/assets/2d46401c-627d-4270-8fe7-da1f38cfb949)
+
