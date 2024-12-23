@@ -657,3 +657,33 @@ Incorrect Methods Tried:
 1) Tried to export different objects from the file as that was done in a forensics challenge.
 
 
+## MSB(Forensics)
+
+## Flag:
+picoCTF{15_y0ur_que57_qu1x071c_0r_h3r01c_ee3cb4d8}
+
+Step 1:
+Downloaded the image and noticed that the image was definitely corrupt so firstly as always tried strings and cat which did nothing, then tried steghide which told me that the file couldnt be opened.
+Step 2:
+Then as the name of the challenge said MSB(which means most significant bit, thanks to FE or BE I know this) so I searched up steganography MSB and got a website which gave me some commands using which I extracted text from the file and got the flag.
+
+~~~
+python sigBits.py Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png.png
+~~~
+This command produced a file, outputSB.txt which on reading and searching pico gave me the flag.
+
+
+![image](https://github.com/user-attachments/assets/789e7891-9e7c-411b-8bb0-6417cb2830b6)
+
+
+Learnings:
+1) Learnt about MSB in terms of steganography and how to extract MSB data from an image.
+
+References:
+https://github.com/Pulho/sigBits/blob/master/README.md
+
+
+
+
+
+
