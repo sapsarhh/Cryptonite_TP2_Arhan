@@ -572,6 +572,29 @@ Try entering "getRandomNumber" without the double quotes...
 ![image](https://github.com/user-attachments/assets/8fc3c7bd-f33e-47eb-843a-ab4541962511)
 
 
+## two-sum(binary exp)
+## Flag:
+picoCTF{Tw0_Sum_Integer_Bu773R_0v3rfl0w_bc0adfd1}
+
+Step 1:
+In the question, as a hint I was told that this wasnt a maths problem but I had to create a buffer overflow, so to do that I opened the source code and looked at the code.
+In there I found that 2 integers were of course being added but an integer overflow could be created if both were greater than 0 and their sum was smaller than 0.
+Now this could be done easily as the maximum value a signed variable can take is 2,147,483,647, so I added 2000000000 and got the flag.
 
 
+~~~
+n1 > n1 + n2 OR n2 > n1 + n2
+What two positive numbers can make this possible:
+2000000000
+2000000000
+You entered 2000000000 and 2000000000
+You have an integer overflow
+YOUR FLAG IS: picoCTF{Tw0_Sum_Integer_Bu773R_0v3rfl0w_bc0adfd1}
+~~~
 
+Learnings:
+1) Learnt about the max value of int.
+
+
+References:
+https://www.geeksforgeeks.org/maximum-value-of-int-in-c/
