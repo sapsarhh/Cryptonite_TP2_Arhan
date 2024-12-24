@@ -722,7 +722,25 @@ Got to know more about the ls command.
 Incorrect Methods:
 Had to try alot of ls commands before actually arriving on the correct one with the help of GPT.
 
+## Local Target(bin exp)
 
+## Flag:
+picoCTF{l0c4l5_1n_5c0p3_7bd3fee1}
 
+Step 1:
+This was a classic problem of buffer overflow, in the source code there was an input variable taking 16 characters, if more than 16 then it was overflowing into num and if num was 65 then it would print me the flag.
+
+Step 2:
+So I started with the hit and trial to obtain the flag and was entering alot of words with the end as '65' but what I didnt realize was it had to be the ascii value so that meant A had to be printed at the end and not 65 the number itself.
+Did that and got the flag.
+
+~~~
+nc saturn.picoctf.net 59823
+Enter a string: 987656789123421789123456A
+
+num is 65
+You win!
+picoCTF{l0c4l5_1n_5c0p3_7bd3fee1}
+~~~
 
 
