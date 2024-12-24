@@ -825,3 +825,19 @@ Learnt how to decompile a java class file
 References:
 https://www.javatpoint.com/java-decompiler
 
+
+## Safe Opener (rev eng)
+
+## Flag:
+picoCTF{pl3as3_l3t_m3_1nt0_th3_saf3}
+
+Step 1:
+Was given a java code in this question, when I opened the code using the strings command found an encoded key which was the flag encoded in base64, converted that and got the flag.
+
+![image](https://github.com/user-attachments/assets/1b4da09a-b059-4771-8b0d-d1c546b850c6)
+
+
+![image](https://github.com/user-attachments/assets/f2e2692b-9d23-4377-a814-fed3845403c7)
+
+
+
