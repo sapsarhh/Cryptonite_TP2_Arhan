@@ -743,4 +743,85 @@ You win!
 picoCTF{l0c4l5_1n_5c0p3_7bd3fee1}
 ~~~
 
+Learnings:
+Actually understand the code first and dont try and rush to a solution.
+
+## safe opener-2 (rev eng)
+
+## flag:
+picoCTF{SAf3_0p3n3rr_y0u_solv3d_it_3dae8463}
+
+Step 1:
+Well I suppose I got lucky in this question because I downloaded the file and got to know that its a java class data file, used the cat command or the strings command and both can be used to get the flag instead of decompiling the whole thing.
+
+
+~~~
+cat SafeOpener.class
+����4�
+CDE     FG
+H
+I
+JL      FN
+OP
+Q
+RS
+.T
+OU
+VW
+X
+Y
+[
+]
+R`ab<init>()VCodeLineNumberTableLocalVariableTablethis
+                                                      LSafeOpener;main([Ljava/lang/String;)VisOpenZargs[Ljava/lang/StringkeyboardLjava/io/BufferedReader;encodercEncoder
+                                      InnerClasses␦Ljava/util/Base64$Encoder;
+StackMapTable*Dcdang/String;keyiI
+ExceptionsopenSafe(Ljava/lang/String;)password
+SourceFileSafeOpener.java
+                         java/io/BufferedReaderjava/io/InputStreamReaderf
+                                                                         gh
+                                                                           i
+                                                                            jk
+                                                                              lm
+                                                                                noEnter password for the safe: p
+                                                                                                                qr
+                                                                                                                  std
+                                                                                                                     uv
+                                                                                                                       wx
+                                                                                                                         yr
+                                                                                                                           >?java/lang/StringBuilder
+You have
+          z{
+            z| attempt(s) left
+                              }t,picoCTF{SAf3_0p3n3rr_y0u_solv3d_it_3dae8463}
+                                                                             ~
+                                                                              Sesame openPassword is incorrect
+
+SafeOpenerjava/lang/Objectjava/util/Base64$Encoderjava/lang/Stringjava/io/IOExceptionjava/lang/SysteminLjava/io/InputStream;(Ljava/io/InputStream;)V(Ljava/io/Reader;)Vjava/util/Base64
+getEncoder()Ljava/util/Base64$Encoder;outLjava/io/PrintStream;java/io/PrintStreamprint(Ljava/lang/String;)readLine()Ljava/lang/StringgetBytes()[BencodeToString([B)Ljava/lang/String;printlnappend-(Ljava/lang/String;)Ljava/lang/StringBuilder;(I)Ljava/lang/StringBuildertoStringequals(Ljava/lang/Object;)Z! /*��!"
+                                                  #$    %& <x�Y�Y���L�:6�T�
+�
+ +�
+�.4>EKPq␦���K,'(�!␦!+,b-1_23[43 X567� 89:;;�V<= >? uL*+��
+                    "#&'"@323�;AB0
+.J/
+
+~~~
+
+But there is an alternative method of course where you actually decompile the file, so I researched on how to decompile the file and got to know how to do it using JDK(installed this when I downloaded Ghidra)
+
+
+~~~
+javap -c SafeOpener.class
+~~~
+
+
+![image](https://github.com/user-attachments/assets/07abce9e-3934-4e7e-a366-3e5581a3163b)
+
+
+Learnings:
+Learnt how to decompile a java class file
+
+References:
+https://www.javatpoint.com/java-decompiler
 
