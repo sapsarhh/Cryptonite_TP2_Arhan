@@ -840,4 +840,17 @@ Was given a java code in this question, when I opened the code using the strings
 ![image](https://github.com/user-attachments/assets/f2e2692b-9d23-4377-a814-fed3845403c7)
 
 
+## patchme.py (rev eng)
+
+## flag:
+picoCTF{p47ch1ng_l1f3_h4ck_f01eabfa}
+
+Step 1:
+Just had to open the source code(the python script) and then had to run the file and enter this password "ak98-=90adfjhgj321sleuth9000" which gives you the flag.
+
+![image](https://github.com/user-attachments/assets/222be69a-9680-4ddb-bdc7-46a483bfb65e)
+
+Learnings:
+Nothing
+
 
