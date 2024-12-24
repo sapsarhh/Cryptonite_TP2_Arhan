@@ -683,6 +683,45 @@ References:
 https://github.com/Pulho/sigBits/blob/master/README.md
 
 
+## VNE(Bin Exp)
+## Flag:
+picoCTF{Power_t0_man!pul4t3_3nv_1ac0e5a3}
+
+Step 1:
+After connecting to the server, I tried to execute the binary file, it told me that a path like variable called SECRET_DIR wasnt set to the correct path.
+In the hints I was told that I check try and cd to the root folder which of course wouldnt work but I still tried, and that didnt work.
+
+Step 2:
+After that I thought of changing the path of SECRET_DIR to the /root folder which worked.
+~~~
+export SECRET_DIR=/root
+~~~
+
+~~~
+./bin
+Listing the content of /root as root:
+flag.txt
+~~~
+Now this was shown to me when I tried and accessed the file meaning there was a flag.txt file in the root folder and I had to read that.
+After many desperate attempts of sudo'ing to the /root folder, I tried to explore the 2nd hint which said I should try and use different arguments with ls.
+
+Step 3:
+So after trying some different arguments with ls command, I finally landed on one which worked.
+
+~~~
+ctf-player@pico-chall$ export SECRET_DIR="ls -la /root | cat /root/flag.txt"
+ctf-player@pico-chall$ ./bin
+Listing the content of ls -la /root | cat /root/flag.txt as root:
+picoCTF{Power_t0_man!pul4t3_3nv_1ac0e5a3}ls: cannot access 'ls': No such file or directory
+~~~
+(i wont lie, I had to ask chatgpt for that one command of ls because I didnt know that one)
+
+Learnings:
+Got to know more about the ls command.
+
+Incorrect Methods:
+Had to try alot of ls commands before actually arriving on the correct one with the help of GPT.
+
 
 
 
